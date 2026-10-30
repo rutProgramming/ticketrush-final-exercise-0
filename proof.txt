@@ -1,0 +1,67 @@
+### git worktree list
+C:/Users/שגב/Downloads/ticketrush-final-exercise-0     8752a1d [main]
+C:/Users/שגב/Downloads/ticketrush-0-early-access       5198558 [feature/early-access]
+C:/Users/שגב/Downloads/ticketrush-0-noa-review         202627c [review/noa-refund]
+C:/Users/שגב/Downloads/ticketrush-0-price-hotfix       8c9321d [hotfix/price]
+C:/Users/שגב/Downloads/ticketrush-0-waitlist           e8a914b [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access                                 5198558 (C:/Users/שגב/Downloads/ticketrush-0-early-access) Raise member ticket limit to six
++ feature/waitlist                                     e8a914b (C:/Users/שגב/Downloads/ticketrush-0-waitlist) Add normalized waitlist email registration
++ hotfix/price                                         8c9321d (C:/Users/שגב/Downloads/ticketrush-0-price-hotfix) Revert "perf: faster price formatting"
+* main                                                 8752a1d [origin/main: ahead 14] Remove payment key and document safe config example
++ review/noa-refund                                    202627c (C:/Users/שגב/Downloads/ticketrush-0-noa-review) [origin/noa/refund: gone] Document refund service fee calculation bug
+  remotes/origin/HEAD                                  -> origin/main
+  remotes/origin/main                                  6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/rut-karelenstein/feature/early-access 5198558 Raise member ticket limit to six
+  remotes/origin/rut-karelenstein/feature/waitlist     e8a914b Add normalized waitlist email registration
+  remotes/origin/rut-karelenstein/hotfix/price         8c9321d Revert "perf: faster price formatting"
+  remotes/origin/rut-karelenstein/main                 8752a1d Remove payment key and document safe config example
+  remotes/origin/rut-karelenstein/result               a342217 result rut-karelenstein 100/100
+  remotes/origin/rut-karelenstein/review/noa-refund    202627c Document refund service fee calculation bug
+  remotes/upstream/HEAD                                -> upstream/main
+  remotes/upstream/main                                6e5b25d feat: friendlier message for empty quantity
+
+### git log --graph --oneline --all -n 80
+* a342217 (origin/rut-karelenstein/result) result rut-karelenstein 100/100
+* 8752a1d (HEAD -> main, tag: v1.1, origin/rut-karelenstein/main) Remove payment key and document safe config example
+*   7d07ecd Merge early access and student promotion into main
+|\  
+| * 5198558 (origin/rut-karelenstein/feature/early-access, feature/early-access) Raise member ticket limit to six
+| *   ff41855 Merge main production fixes into early access
+| |\  
+| * | dfad01d Preserve half-NIS student ticket pricing
+| * |   eb0eb2e Resolve student promotion pricing contract
+| |\ \  
+| | * | d4b1e35 test: add student discount tests
+| | * | 0841085 feat: student discount (15%)
+| * | | 8f504c6 Implement member and student pricing rules
+| |/ /  
+* | / d8f91a3 fix: correct concert date in events.js
+| |/  
+|/|   
+* |   a78b27c Merge waitlist feature onto main
+|\ \  
+| * | e8a914b (origin/rut-karelenstein/feature/waitlist, feature/waitlist) Add normalized waitlist email registration
+|/ /  
+* |   c2d1253 Merge price hotfix onto main
+|\ \  
+| |/  
+|/|   
+| * 8c9321d (origin/rut-karelenstein/hotfix/price, hotfix/price) Revert "perf: faster price formatting"
+|/  
+| * 202627c (origin/rut-karelenstein/review/noa-refund, review/noa-refund) Document refund service fee calculation bug
+| * f7e8785 test: refund tests
+| * 61bfedd feat: refund calculation for cancelled orders
+|/  
+* 6e5b25d (upstream/main, upstream/HEAD, origin/main, origin/HEAD) feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
