@@ -16,7 +16,7 @@ function calcTotal(qty, isMember, isStudent) {
   if (isMember) {
     ticketPrice = Math.round(TICKET_PRICE * 0.8);
   } else if (isStudent) {
-    ticketPrice = Math.round(TICKET_PRICE * 0.85);
+    ticketPrice = TICKET_PRICE * 0.85;
   }
   return qty * (ticketPrice + SERVICE_FEE);
 }
