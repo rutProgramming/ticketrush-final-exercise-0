@@ -2,6 +2,7 @@
 const TICKET_PRICE = 350; // ₪ לכרטיס
 const SERVICE_FEE = 12;   // ₪ עמלת שירות לכל כרטיס
 const MAX_TICKETS = 8;    // מקסימום כרטיסים להזמנה
+const STUDENT_DISCOUNT = 0.15; // מבצע סטודנטיות: 15% על מחיר הכרטיס
 
 function maxTickets(isMember) {
   return isMember ? 6 : MAX_TICKETS;
@@ -21,5 +22,5 @@ function calcTotal(qty, isMember, isStudent) {
 }
 
 if (typeof module !== 'undefined') {
-  module.exports = { TICKET_PRICE, SERVICE_FEE, MAX_TICKETS, maxTickets, calcTotal };
+  module.exports = { TICKET_PRICE, SERVICE_FEE, MAX_TICKETS, STUDENT_DISCOUNT, maxTickets, calcTotal };
 }
